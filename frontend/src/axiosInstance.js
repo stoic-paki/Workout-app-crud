@@ -1,11 +1,11 @@
 import axios from "axios"
 
 export const WorkoutBaseUrl = axios.create({
-    baseURL: "http://localhost:4000/workout/"
+    baseURL: "https://workout-app-backend-ivory.vercel.app/workout/"
 })
 
 export const userBaseUrl = axios.create({
-    baseURL: "http://localhost:4000/user/"
+    baseURL: "https://workout-app-backend-ivory.vercel.app/user/"
 })
 
 // setting headers
