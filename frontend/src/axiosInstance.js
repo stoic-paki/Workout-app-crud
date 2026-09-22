@@ -1,11 +1,14 @@
 import axios from "axios"
 
+const baseURL = import.meta.env.VITE_API_URL.replace(/\/$/, '');
+
+
 export const WorkoutBaseUrl = axios.create({
-    baseURL: "https://workout-app-backend-ivory.vercel.app/workout/"
+    baseURL: `${baseURL}/workout`
 })
 
 export const userBaseUrl = axios.create({
-    baseURL: "https://workout-app-backend-ivory.vercel.app/user/"
+    baseURL: `${baseURL}/user`
 })
 
 // setting headers
