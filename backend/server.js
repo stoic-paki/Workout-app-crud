@@ -36,6 +36,10 @@ app.use((err, req, res, next) => {
 });
 
 
-app.listen(port, ()=>{
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(port, () => {
     console.log(`app is running on port ${port}`)
-})
+  });
+}
+
+export default app;
