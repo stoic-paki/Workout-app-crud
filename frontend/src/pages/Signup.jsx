@@ -2,7 +2,7 @@ import { useState } from "react";
 import './../index.css'
 import { userBaseUrl } from "../axiosInstance";
 import { toast, Toaster } from "react-hot-toast"
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate, Link } from "react-router-dom";
 
 const Signup = () => {
     const [signupForm, setSignupForm] = useState({
@@ -195,12 +195,12 @@ const Signup = () => {
                         </button>
                     </form>
 
-                    <p className="text-[#BBD5ED]/70 text-sm text-center mt-6">
-                        Already have an account?{" "}
-                        <a href="/login" className="text-[#904C77] hover:text-[#a15a87] font-medium">
-                            Log in
-                        </a>
-                    </p>
+       <p className="text-[#BBD5ED]/70 text-sm text-center mt-6">
+    Already have an account?{" "}
+    <Link to="/login" className="text-[#904C77] hover:text-[#a15a87] font-medium">
+        Log in
+    </Link>
+</p>
                 </div>
             </div>
         </div>

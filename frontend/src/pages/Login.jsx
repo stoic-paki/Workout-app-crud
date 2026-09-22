@@ -3,6 +3,7 @@ import './../index.css'
 import { userBaseUrl } from "../axiosInstance.js";
 import { useNavigate, Navigate } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast"
+import { Link } from "react-router-dom";
 
 const Login = () => {
     // All hooks called unconditionally, at the top, every render
@@ -136,13 +137,13 @@ const Login = () => {
                     <div className="flex items-center justify-between mt-5 text-sm">
                         <p className="text-[#BBD5ED]/70">
                             Don't have an account?{" "}
-                            <a href="/signup" className="text-[#904C77] hover:text-[#a15a87] font-medium">
+                            <Link to="/signup" className="text-[#904C77] hover:text-[#a15a87] font-medium">
                                 Sign up
-                            </a>
+                            </Link>
                         </p>
-                        <a href="/forgot-password" className="text-[#846B8A] hover:text-[#BBD5ED] transition-colors">
+                        <Link to="/forgot-password" className="text-[#846B8A] hover:text-[#BBD5ED] transition-colors">
                             Forgot password?
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
