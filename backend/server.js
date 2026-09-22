@@ -15,7 +15,14 @@ app.use(express.json())
 app.use(cors())
 
 // connecting to db
-connectDB()
+app.use(async (req, res, next) => {
+    try {
+        await connectDB();
+        next();
+    } catch (error) {
+        return res.status(500).json({ success: false, message: "Database connection failed" });
+    }
+});
 
 // adding routes. 
 app.use("/workout", authorizationToken ,workoutsRouter)
